@@ -12,6 +12,8 @@ pub struct Data {
     created_at: DateTime<Utc>,
 }
 
+
+
 impl Data {
     pub fn new(name: String, value: i64, tags: Vec<String>) -> Self {
         Self {

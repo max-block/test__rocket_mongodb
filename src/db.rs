@@ -26,4 +26,12 @@ impl DB {
     pub fn insert_data(&self, name: String, value: i64, tags: Vec<String>) -> Result<InsertOneResult, MongoError> {
         self.col.insert_one(Data::new(name, value, tags).to_doc(), None)
     }
+
+    pub fn find_data(&self, name: Option<String>, limit: u64) {
+
+    }
+
+    pub fn drop_col(&self) ->Result<(), MongoError>{
+        self.col.drop(None)
+    }
 }
